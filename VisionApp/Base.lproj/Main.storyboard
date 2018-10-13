@@ -52,6 +52,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="La imagen no es un lunar. Intente de nuevo." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s66-eb-sSS">
+                                        <rect key="frame" x="25" y="32" width="297" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -86,6 +93,7 @@
                         <outlet property="benignoIdentifierLabel" destination="7lE-5x-19M" id="xUJ-lL-WJd"/>
                         <outlet property="cameraView" destination="EPm-EO-ahV" id="inF-aU-8Fc"/>
                         <outlet property="capturedImageView" destination="z5p-fG-YvU" id="f4L-Ae-5wf"/>
+                        <outlet property="errorLabel" destination="s66-eb-sSS" id="MJp-f7-fQM"/>
                         <outlet property="flashButton" destination="WHW-e1-6aZ" id="mUv-qS-tho"/>
                         <outlet property="identifierView" destination="KCc-xB-x2q" id="WxT-LM-R75"/>
                         <outlet property="malignoIdentifierLabel" destination="ily-EI-Y2J" id="BRe-Or-ACe"/>

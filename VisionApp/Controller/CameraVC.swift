@@ -34,9 +34,12 @@ class CameraVC: UIViewController {
     @IBOutlet weak var benignoIdentifierLabel: UILabel!
     @IBOutlet weak var identifierView: RoundedView!
     @IBOutlet weak var cameraView: UIView!
+    @IBOutlet weak var errorLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        errorLabel.isHidden = true
         
     }
     
@@ -105,22 +108,8 @@ class CameraVC: UIViewController {
         guard let results = request.results as? [VNClassificationObservation] else { return } // VNClassificationObservation does the image analysis and throws a results
         
         for clasification in results {
-            if clasification.confidence < 0.9 {
-                print(clasification.identifier)
-                self.benignoIdentifierLabel.text = "No reconoce"
-                self.malignoIdentifierLabel.text = ""
+            if clasification.identifier == "entorno" {
                 
-                break
-            } else {
-                if clasification.identifier == "maligno" {
-                    self.malignoIdentifierLabel.text = "\(clasification.identifier) with \(Int(clasification.confidence * 100)) %"
-                    self.benignoIdentifierLabel.text = ""
-                } else {
-                    self.benignoIdentifierLabel.text = "\(clasification.identifier) with \(Int(clasification.confidence * 100)) %"
-                    self.malignoIdentifierLabel.text = ""
-                }
-
-                break
             }
         }
     }
@@ -150,7 +139,7 @@ extension CameraVC: AVCapturePhotoCaptureDelegate {
             photoData = photo.fileDataRepresentation()
             
             do {
-                let model = try VNCoreMLModel(for: DefaultCustomModel_1581594473().model) // Connecting to out CoreML model
+                let model = try VNCoreMLModel(for: MelanomaModel().model) // Connecting to out CoreML model
                 let request = VNCoreMLRequest(model: model, completionHandler: resultsMethod)
                 let handler = VNImageRequestHandler(data: photoData!)
                 
