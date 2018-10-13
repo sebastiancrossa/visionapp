@@ -14,7 +14,7 @@
 		98302E792171ECF20008A6AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98302E772171ECF20008A6AF /* LaunchScreen.storyboard */; };
 		98302E852171F5CF0008A6AF /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98302E842171F5CF0008A6AF /* RoundedView.swift */; };
 		98302E872171F8040008A6AF /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98302E862171F8040008A6AF /* RoundedImageView.swift */; };
-		98302E8B2172A1120008A6AF /* MelanomaModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 98302E8A2172A1120008A6AF /* MelanomaModel.mlmodel */; };
+		98302E8D2172B5180008A6AF /* MelanomaModelUpdated.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 98302E8C2172B5180008A6AF /* MelanomaModelUpdated.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 		98302E7A2171ECF20008A6AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98302E842171F5CF0008A6AF /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		98302E862171F8040008A6AF /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
-		98302E8A2172A1120008A6AF /* MelanomaModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MelanomaModel.mlmodel; sourceTree = "<group>"; };
+		98302E8C2172B5180008A6AF /* MelanomaModelUpdated.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MelanomaModelUpdated.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +100,7 @@
 		98302E832171EED80008A6AF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				98302E8A2172A1120008A6AF /* MelanomaModel.mlmodel */,
+				98302E8C2172B5180008A6AF /* MelanomaModelUpdated.mlmodel */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -177,7 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98302E872171F8040008A6AF /* RoundedImageView.swift in Sources */,
-				98302E8B2172A1120008A6AF /* MelanomaModel.mlmodel in Sources */,
+				98302E8D2172B5180008A6AF /* MelanomaModelUpdated.mlmodel in Sources */,
 				98302E712171ECEF0008A6AF /* CameraVC.swift in Sources */,
 				98302E6F2171ECEF0008A6AF /* AppDelegate.swift in Sources */,
 				98302E852171F5CF0008A6AF /* RoundedView.swift in Sources */,

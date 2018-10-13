@@ -35,11 +35,14 @@ class CameraVC: UIViewController {
     @IBOutlet weak var identifierView: RoundedView!
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var introLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         errorLabel.isHidden = true
+        malignoIdentifierLabel.isHidden = true
+        benignoIdentifierLabel.isHidden = true
         
     }
     
@@ -108,8 +111,47 @@ class CameraVC: UIViewController {
         guard let results = request.results as? [VNClassificationObservation] else { return } // VNClassificationObservation does the image analysis and throws a results
         
         for clasification in results {
-            if clasification.identifier == "entorno" {
+            print(clasification.identifier)
+            
+            if clasification.identifier == "Entorno" {
+                errorLabel.isHidden = false
+                introLabel.isHidden = true
                 
+                malignoIdentifierLabel.isHidden = true
+                benignoIdentifierLabel.isHidden = true
+                break
+            } else if clasification.identifier == "Maligno" {
+                introLabel.isHidden = true
+                
+                malignoIdentifierLabel.isHidden = false
+                benignoIdentifierLabel.isHidden = true
+                errorLabel.isHidden = true
+                
+                malignoIdentifierLabel.text = "MALIGNO: \(clasification.confidence * 100)%"
+                break
+            } else if clasification.identifier == "Benigno" {
+                introLabel.isHidden = true
+                
+                malignoIdentifierLabel.isHidden = true
+                benignoIdentifierLabel.isHidden = false
+                errorLabel.isHidden = true
+                
+                benignoIdentifierLabel.text = "BENIGNO: \(clasification.confidence * 100)%"
+                break
+            } else if clasification.identifier == "Piel" {
+                malignoIdentifierLabel.isHidden = true
+                benignoIdentifierLabel.isHidden = true
+                errorLabel.isHidden = true
+                
+                introLabel.text = "El lunar es poco visible. Intente otro angulo."
+                break
+            } else {
+                introLabel.isHidden = true
+                
+                malignoIdentifierLabel.isHidden = true
+                benignoIdentifierLabel.isHidden = true
+                errorLabel.isHidden = false
+                break
             }
         }
     }
@@ -139,7 +181,7 @@ extension CameraVC: AVCapturePhotoCaptureDelegate {
             photoData = photo.fileDataRepresentation()
             
             do {
-                let model = try VNCoreMLModel(for: MelanomaModel().model) // Connecting to out CoreML model
+                let model = try VNCoreMLModel(for: MelanomaModelUpdated().model) // Connecting to out CoreML model
                 let request = VNCoreMLRequest(model: model, completionHandler: resultsMethod)
                 let handler = VNImageRequestHandler(data: photoData!)
                 
