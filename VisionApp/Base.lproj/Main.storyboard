@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -9,16 +12,85 @@
         <!--CameraVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CameraVC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CameraVC" customModule="VisionApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EPm-EO-ahV" userLabel="Camera View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="1" green="0.91008226400000003" blue="0.95956671449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHW-e1-6aZ">
+                                <rect key="frame" x="20" y="613" width="110" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="1VD-lD-9vY"/>
+                                    <constraint firstAttribute="width" constant="110" id="uIE-wN-6Pz"/>
+                                </constraints>
+                                <state key="normal" title="FLASH OFF">
+                                    <color key="titleColor" red="0.84705882349999995" green="0.2784313725" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KCc-xB-x2q" customClass="RoundedView" customModule="VisionApp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="35" width="335" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MALIGNO:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ily-EI-Y2J">
+                                        <rect key="frame" x="20" y="17" width="81" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BENIGNO:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lE-5x-19M">
+                                        <rect key="frame" x="20" y="46" width="79" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="r48-Jn-UIg"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z5p-fG-YvU" customClass="RoundedImageView" customModule="VisionApp" customModuleProvider="target">
+                                <rect key="frame" x="280" y="519" width="75" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="IXj-ZD-Dc5"/>
+                                    <constraint firstAttribute="width" constant="75" id="suN-X0-Eqj"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KCc-xB-x2q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="56T-R7-U7f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="z5p-fG-YvU" secondAttribute="trailing" constant="20" id="IOT-yj-Vvd"/>
+                            <constraint firstItem="EPm-EO-ahV" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="LCO-Xz-neb"/>
+                            <constraint firstItem="WHW-e1-6aZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="RgV-Hn-mQe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KCc-xB-x2q" secondAttribute="trailing" constant="20" id="ZL3-sJ-BUy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="z5p-fG-YvU" secondAttribute="bottom" constant="20" id="m8f-Po-ehK"/>
+                            <constraint firstItem="EPm-EO-ahV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nd5-U7-Suz"/>
+                            <constraint firstItem="EPm-EO-ahV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nuy-Aw-dvq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WHW-e1-6aZ" secondAttribute="bottom" constant="20" id="sHi-ih-veY"/>
+                            <constraint firstItem="KCc-xB-x2q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="vqs-dI-qyi"/>
+                            <constraint firstItem="EPm-EO-ahV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="w8e-hi-AEG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="benignoIdentifierLabel" destination="7lE-5x-19M" id="xUJ-lL-WJd"/>
+                        <outlet property="cameraView" destination="EPm-EO-ahV" id="inF-aU-8Fc"/>
+                        <outlet property="capturedImageView" destination="z5p-fG-YvU" id="f4L-Ae-5wf"/>
+                        <outlet property="flashButton" destination="WHW-e1-6aZ" id="mUv-qS-tho"/>
+                        <outlet property="identifierView" destination="KCc-xB-x2q" id="WxT-LM-R75"/>
+                        <outlet property="malignoIdentifierLabel" destination="ily-EI-Y2J" id="BRe-Or-ACe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
         </scene>
     </scenes>
 </document>

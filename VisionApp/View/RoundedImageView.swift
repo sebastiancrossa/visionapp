@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RoundedImageView.swift
 //  VisionApp
 //
 //  Created by Sebastian Crossa on 10/13/18.
@@ -8,12 +8,10 @@
 
 import UIKit
 
-class CameraVC: UIViewController {
+class RoundedImageView: UIImageView {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    override func awakeFromNib() {
+        self.layer.cornerRadius = 5
     }
 
 }
-

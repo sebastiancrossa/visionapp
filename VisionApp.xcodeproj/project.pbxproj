@@ -12,6 +12,8 @@
 		98302E742171ECEF0008A6AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98302E722171ECEF0008A6AF /* Main.storyboard */; };
 		98302E762171ECF20008A6AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98302E752171ECF20008A6AF /* Assets.xcassets */; };
 		98302E792171ECF20008A6AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98302E772171ECF20008A6AF /* LaunchScreen.storyboard */; };
+		98302E852171F5CF0008A6AF /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98302E842171F5CF0008A6AF /* RoundedView.swift */; };
+		98302E872171F8040008A6AF /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98302E862171F8040008A6AF /* RoundedImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		98302E752171ECF20008A6AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98302E782171ECF20008A6AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		98302E7A2171ECF20008A6AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98302E842171F5CF0008A6AF /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		98302E862171F8040008A6AF /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +63,6 @@
 				98302E812171EECF0008A6AF /* View */,
 				98302E802171EEC70008A6AF /* Controller */,
 				98302E6E2171ECEF0008A6AF /* AppDelegate.swift */,
-				98302E702171ECEF0008A6AF /* CameraVC.swift */,
 				98302E722171ECEF0008A6AF /* Main.storyboard */,
 				98302E752171ECF20008A6AF /* Assets.xcassets */,
 				98302E772171ECF20008A6AF /* LaunchScreen.storyboard */,
@@ -71,6 +74,7 @@
 		98302E802171EEC70008A6AF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				98302E702171ECEF0008A6AF /* CameraVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -78,6 +82,8 @@
 		98302E812171EECF0008A6AF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				98302E842171F5CF0008A6AF /* RoundedView.swift */,
+				98302E862171F8040008A6AF /* RoundedImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -167,8 +173,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98302E872171F8040008A6AF /* RoundedImageView.swift in Sources */,
 				98302E712171ECEF0008A6AF /* CameraVC.swift in Sources */,
 				98302E6F2171ECEF0008A6AF /* AppDelegate.swift in Sources */,
+				98302E852171F5CF0008A6AF /* RoundedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
