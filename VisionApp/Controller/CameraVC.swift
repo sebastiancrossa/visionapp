@@ -43,7 +43,6 @@ class CameraVC: UIViewController {
         errorLabel.isHidden = true
         malignoIdentifierLabel.isHidden = true
         benignoIdentifierLabel.isHidden = true
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -139,6 +138,8 @@ class CameraVC: UIViewController {
                 benignoIdentifierLabel.text = "BENIGNO: \(clasification.confidence * 100)%"
                 break
             } else if clasification.identifier == "Piel" {
+                introLabel.isHidden = false
+                
                 malignoIdentifierLabel.isHidden = true
                 benignoIdentifierLabel.isHidden = true
                 errorLabel.isHidden = true
