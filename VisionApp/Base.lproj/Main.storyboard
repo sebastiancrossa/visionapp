@@ -22,7 +22,7 @@
                                 <color key="backgroundColor" red="1" green="0.91008226400000003" blue="0.95956671449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwv-wY-klR">
-                                <rect key="frame" x="20" y="580" width="25" height="25"/>
+                                <rect key="frame" x="172" y="613" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="information"/>
                                 <connections>
@@ -147,12 +147,12 @@
                                         <rect key="frame" x="25" y="118" width="240" height="341"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <string key="text">Vision es una aplicación que compara las imágenes tomadas con imágenes de nuestro modelo entrenado, por lo que los resultados nunca serán 100% acertados.
+                                        <string key="text">- Vision es una aplicación que compara las imágenes tomadas con imágenes de nuestro modelo entrenado, por lo que los resultados nunca serán 100% acertados.
 
-Le recomendamos analizar más de una vez para así aumentar el nivel de certeza del diagnóstico y recibir un porcentaje más apegado a lo que en realidad es.
+- Le recomendamos analizar más de una vez para así aumentar el nivel de certeza del diagnóstico y recibir un porcentaje más apegado a lo que en realidad es.
 
-Asegurese de contar con buena iluminación y enfoque.</string>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+- Asegurese de contar con buena iluminación y enfoque.</string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
