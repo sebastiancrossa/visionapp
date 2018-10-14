@@ -15,6 +15,8 @@
 		98302E852171F5CF0008A6AF /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98302E842171F5CF0008A6AF /* RoundedView.swift */; };
 		98302E872171F8040008A6AF /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98302E862171F8040008A6AF /* RoundedImageView.swift */; };
 		98302E8D2172B5180008A6AF /* MelanomaModelUpdated.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 98302E8C2172B5180008A6AF /* MelanomaModelUpdated.mlmodel */; };
+		98302E93217349B40008A6AF /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98302E92217349B40008A6AF /* InfoVC.swift */; };
+		98302E9521734C2C0008A6AF /* RoundedButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98302E9421734C2C0008A6AF /* RoundedButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		98302E842171F5CF0008A6AF /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		98302E862171F8040008A6AF /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		98302E8C2172B5180008A6AF /* MelanomaModelUpdated.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MelanomaModelUpdated.mlmodel; sourceTree = "<group>"; };
+		98302E92217349B40008A6AF /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
+		98302E9421734C2C0008A6AF /* RoundedButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				98302E702171ECEF0008A6AF /* CameraVC.swift */,
+				98302E92217349B40008A6AF /* InfoVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -86,6 +91,7 @@
 			children = (
 				98302E842171F5CF0008A6AF /* RoundedView.swift */,
 				98302E862171F8040008A6AF /* RoundedImageView.swift */,
+				98302E9421734C2C0008A6AF /* RoundedButtonView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -180,6 +186,8 @@
 				98302E8D2172B5180008A6AF /* MelanomaModelUpdated.mlmodel in Sources */,
 				98302E712171ECEF0008A6AF /* CameraVC.swift in Sources */,
 				98302E6F2171ECEF0008A6AF /* AppDelegate.swift in Sources */,
+				98302E9521734C2C0008A6AF /* RoundedButtonView.swift in Sources */,
+				98302E93217349B40008A6AF /* InfoVC.swift in Sources */,
 				98302E852171F5CF0008A6AF /* RoundedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

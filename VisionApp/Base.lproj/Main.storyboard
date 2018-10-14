@@ -21,7 +21,15 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="1" green="0.91008226400000003" blue="0.95956671449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHW-e1-6aZ">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwv-wY-klR">
+                                <rect key="frame" x="20" y="580" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="information"/>
+                                <connections>
+                                    <segue destination="Ls5-D6-alW" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="lKn-Er-IEV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHW-e1-6aZ" customClass="RoundedButtonView" customModule="VisionApp" customModuleProvider="target">
                                 <rect key="frame" x="20" y="613" width="110" height="34"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -29,7 +37,7 @@
                                     <constraint firstAttribute="width" constant="110" id="uIE-wN-6Pz"/>
                                 </constraints>
                                 <state key="normal" title="FLASH OFF">
-                                    <color key="titleColor" red="0.84705882349999995" green="0.2784313725" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.28235294117647058" green="0.55686274509803924" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="flashButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BjS-IC-Ybq"/>
@@ -111,5 +119,58 @@
             </objects>
             <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
         </scene>
+        <!--InfoVC-->
+        <scene sceneID="MyE-Fv-bKt">
+            <objects>
+                <viewController id="Ls5-D6-alW" customClass="InfoVC" customModule="VisionApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kbb-Eb-CL4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BAX-4b-8V8" customClass="RoundedView" customModule="VisionApp" customModuleProvider="target">
+                                <rect key="frame" x="42" y="92" width="291" height="482"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="OLH-VH-kek">
+                                        <rect key="frame" x="76" y="59" width="139" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6w-yr-TE0">
+                                        <rect key="frame" x="257" y="20" width="14" height="14"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="cancel"/>
+                                        <connections>
+                                            <action selector="closeButtonWasPressed:" destination="Ls5-D6-alW" eventType="touchUpInside" id="PHH-FV-QRM"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NsM-hc-AW1">
+                                        <rect key="frame" x="25" y="118" width="240" height="341"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Vision es una aplicación que compara las imágenes tomadas con imágenes de nuestro modelo entrenado, por lo que los resultados nunca serán 100% acertados.
+
+Le recomendamos analizar más de una vez para así aumentar el nivel de certeza del diagnóstico y recibir un porcentaje más apegado a lo que en realidad es.
+
+Asegurese de contar con buena iluminación y enfoque.</string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.95686274509803915" green="0.98039215686274506" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.25" alpha="0.75" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="wcr-Yi-ZKn"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o6b-YU-Ykj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="732" y="26.53673163418291"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="Logo" width="618.66668701171875" height="180.33332824707031"/>
+        <image name="cancel" width="204.80000305175781" height="204.80000305175781"/>
+        <image name="information" width="204.80000305175781" height="204.80000305175781"/>
+    </resources>
 </document>
