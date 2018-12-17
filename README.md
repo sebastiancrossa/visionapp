@@ -13,4 +13,4 @@ Plataforma que usa Machine Learning para detecter potenciales melanomas.
 
 ## Licencia
 
-Éste proyecto está bajo la licencia de [GPL v3](LICENSE.md).
+Éste proyecto está bajo la licencia de [GPL v3](LICENSE).
