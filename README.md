@@ -11,7 +11,12 @@ Plataforma que usa Machine Learning para detecter potenciales melanomas.
 
 <br>
 
-![Vision Screens](https://github.com/sebastiancrossa/visionapp/blob/master/screen.jpg?raw=true)
+<div align="center">
+  <br>
+  <img
+  src="https://github.com/sebastiancrossa/visionapp/blob/master/screen.jpg?raw=true"
+  />
+</div>
 
 ## Tecnologías usadas
 
