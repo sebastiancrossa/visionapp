@@ -7,7 +7,7 @@
 </div>
 
 # Vision [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) ![Project Version](https://img.shields.io/badge/version-1.0.0-brightgreen.svg)
-Plataforma que usa Machine Learning para detecter potenciales melanomas.
+Mobile app that uses Machine Learning to detect potential melanoma.
 
 <br>
 
@@ -18,11 +18,11 @@ Plataforma que usa Machine Learning para detecter potenciales melanomas.
   />
 </div>
 
-## Tecnologías usadas
+## Stack used
 
-* [IBM Watson](https://www.ibm.com/watson/) - Usado para el preprocesamiento de imágenes.
-* [CoreML 2](https://developer.apple.com/machine-learning/) - Usado para la clasificación de las imágenes.
+* [IBM Watson](https://www.ibm.com/watson/) - Used for image processing.
+* [CoreML 2](https://developer.apple.com/machine-learning/) - Used for the clasification of images.
 
-## Licencia
+## License
 
-Éste proyecto está bajo la licencia de [GPL v3](LICENSE).
+This project uses the [GPL v3](LICENSE) license.
